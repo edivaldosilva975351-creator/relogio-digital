@@ -1,0 +1,59 @@
+/* Reset e fontes */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  background: rgba(0,0,0,0.5);
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.clock:hover {
+  transform: scale(1.05);
+}
+
+.time {
+  font-size: 4rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  animation: pulse 1s infinite alternate;
+}
+
+.label {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #ffcc00;
+}
+
+/* Pulsação nos números */
+@keyframes pulse {
+  0% { color: #ffffff; transform: scale(1); }
+  50% { color: #ffcc00; transform: scale(1.1); }
+  100% { color: #ffffff; transform: scale(1); }
+}
+/* Estilo dos separadores */
+.separator {
+  color: #ffcc00;
+  animation: blink 1s infinite;
+}
